@@ -1,5 +1,7 @@
 # HealthCare-Project
 
+Analyzed patient stay durations to optimize hospital bed usage and improve efficiency. Used SQL to create histogram-like visualizations, revealing most patients stay less than 7 days. Insights support better resource management, patient turnover, and cost reduction.
+
 ```sql
 SELECT ROUND(time_in_hospital, 1) AS bucket, 
 COUNT(*) AS count,
