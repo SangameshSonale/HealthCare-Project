@@ -28,6 +28,15 @@ ORDER BY avg_procedures DESC
 ```
 ![Medical Speciality on avg procedures](https://github.com/user-attachments/assets/42a31d6f-bc23-4efc-ab22-e94972d3c5ce)
 
+### Race-Based Lab Procedure Analysis
+This project evaluates potential disparities in the number of lab procedures performed across different racial groups in a hospital. By combining patient demographic data and health information through SQL joins, insights were derived to address the Chief of Nursing's concerns.
+Key Highlights:
+* Used an INNER JOIN to merge demographic and health datasets on patient_nbr.
+* Calculated the average number of lab procedures (AVG(num_lab_procedures)) grouped by race.
+* Observed no significant gaps in the number of lab tests performed across races.
+  
+This project showcases advanced SQL techniques, such as joins and grouping, to answer critical healthcare questions and ensure equitable treatment across patient demographics.
+
 ```sql
 SELECT race, AVG(num_lab_procedures) AS num_avg_lab_procedures FROM patient.health AS ph
 JOIN patient.demographics AS pd on 
