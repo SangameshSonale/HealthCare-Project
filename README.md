@@ -11,6 +11,13 @@ ORDER BY bucket;
 ```
 ![Histogram](https://github.com/user-attachments/assets/53d78a20-1ea5-4a1a-aff0-08116d5ab09b)
 
+Analyzed medical specialties to identify those performing the highest average number of procedures. Used SQL to calculate averages, count patients per specialty, and filter results based on meaningful thresholds. Key highlights include:
+
+* Identified specialties with an average of more than 2.5 procedures.
+* Filtered data to include specialties with over 50 patients for reliability.
+* Delivered actionable insights to help the director focus on high-procedure specialties.
+This project demonstrates advanced SQL techniques like DISTINCT, GROUP BY, HAVING, and aggregations for effective healthcare data analysis.
+
 ```sql
 SELECT DISTINCT medical_specialty, ROUND(AVG(num_procedures), 1) AS avg_procedures,
 COUNT(medical_specialty) AS count FROM patient.health 
