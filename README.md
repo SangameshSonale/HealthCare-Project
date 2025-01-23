@@ -1,5 +1,7 @@
 # HealthCare-Project
 
+### Hospital Stay Analysis
+
 Analyzed patient stay durations to optimize hospital bed usage and improve efficiency. Used SQL to create histogram-like visualizations, revealing most patients stay less than 7 days. Insights support better resource management, patient turnover, and cost reduction.
 
 ```sql
@@ -10,6 +12,8 @@ GROUP BY bucket
 ORDER BY bucket;
 ```
 ![Histogram](https://github.com/user-attachments/assets/53d78a20-1ea5-4a1a-aff0-08116d5ab09b)
+
+### Medical Specialty Procedure Analysis
 
 Analyzed medical specialties to identify those performing the highest average number of procedures. Used SQL to calculate averages, count patients per specialty, and filter results based on meaningful thresholds. Key highlights include:
 
