@@ -10,7 +10,8 @@ ORDER BY bucket;
 ![Histogram](https://github.com/user-attachments/assets/53d78a20-1ea5-4a1a-aff0-08116d5ab09b)
 
 ```sql
-SELECT DISTINCT medical_specialty, ROUND(AVG(num_procedures), 1) AS avg_procedures, COUNT(medical_specialty) AS count FROM patient.health 
+SELECT DISTINCT medical_specialty, ROUND(AVG(num_procedures), 1) AS avg_procedures,
+COUNT(medical_specialty) AS count FROM patient.health 
 GROUP BY medical_specialty
 HAVING count > 51 AND avg_procedures >2.5 
 ORDER BY avg_procedures DESC
