@@ -27,6 +27,21 @@ ORDER BY num_avg_lab_procedures DESC;
 ```
 ![race_avg_lab_procedures](https://github.com/user-attachments/assets/6de92ebe-f57c-427a-8150-1be606cb0f90)
 
+```sql
+SELECT AVG(time_in_hospital) AS avg_time,
+CASE 
+     WHEN num_lab_procedures >= 0 AND num_lab_procedures < 25 THEN 'few'
+	 WHEN num_lab_procedures >= 25 AND num_lab_procedures < 50 THEN 'average'
+     WHEN num_lab_procedures >= 50 THEN 'many'
+END AS procedure_frequency
+FROM patient.health 
+GROUP BY procedure_frequency
+ORDER BY avg_time DESC
+```
+![avg_time_procedure](https://github.com/user-attachments/assets/ef58fe15-033c-4b27-9d8a-e9fa2f32ecc9)
+
+
+
 
 
 
