@@ -12,6 +12,8 @@ This project dives into real-world healthcare challenges, showcasing how SQL can
 ## What & Where of the Dataset
 The dataset used in this project was sourced from Kaggle.com, a trusted platform for open-source datasets. It contains comprehensive information on hospital operations, including patient demographics, procedures, medications, and outcomes. This dataset is ideal for educational purposes and demonstrates how SQL can be applied to analyze and extract insights from real-world healthcare data.### Hospital Stay Analysis
 
+## Analysis:
+### Hospital Stay Analysis
 Analyzed patient stay durations to optimize hospital bed usage and improve efficiency. Used SQL to create histogram-like visualizations, revealing most patients stay less than 7 days. Insights support better resource management, patient turnover, and cost reduction.
 
 ```sql
@@ -139,6 +141,22 @@ SELECT CONCAT('patient ', ph.patient_nbr , ' was ', pd.race , ' AND ',
                num_lab_procedures DESC LIMIT 50
 ```
 ![Capture1](https://github.com/user-attachments/assets/1276a2e7-9c58-4ab8-891b-9697d1bfec9d)
+
+Top 5 Insights from the Project
+* ### Hospital Stay Optimization:
+Patients admitted for emergencies (admission_type_id = 1) but discharged in less time than the average hospital stay highlight the hospital’s ability to handle critical cases efficiently.
+
+* ### Procedure Frequency Correlation:
+A positive correlation was identified between the number of lab procedures and the length of hospital stays. Patients undergoing more procedures tend to stay longer, offering opportunities to explore resource allocation strategies.
+
+* ### High-Procedure Specialties:
+Specialties with the highest average procedures (e.g., above 2.5) and sufficient patient volume (count > 50) were identified, allowing hospital administrators to focus on areas with the most significant operational impact.
+
+* ### Equitable Treatment Analysis:
+No significant disparities were found in the average number of lab procedures performed across different racial groups, suggesting equity in patient treatment.
+
+* ### Patient Medication Summaries:
+Created a detailed and human-readable summary for the top 50 medication-intensive patients, combining demographic and procedural data. This insight provides a clear narrative of patient care for reporting or research purposes.
 
 
 
