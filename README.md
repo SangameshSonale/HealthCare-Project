@@ -91,6 +91,16 @@ SELECT patient_nbr FROM patient.health WHERE metformin= 'up'
 ```
 ![patience_nbr](https://github.com/user-attachments/assets/b6fbbf5d-a55b-462b-a163-cd7a20dbea54)
 
+### Highlighting Hospital Success Stories with SQL Subqueries and CTEs
+
+This project identifies cases where patients were admitted for emergencies (admission_type_id = 1) and stayed in the hospital for less than the average duration, showcasing hospital efficiency and success stories.
+
+Key Highlights:
+
+* Utilized a subquery to calculate the average hospital stay and filter patients below this threshold.
+* Simplified complex queries using a Common Table Expression (CTE) for better readability and reusability.
+* Delivered a list of emergency cases with shorter-than-average stays, emphasizing hospital effectiveness in handling emergencies.
+
 ```sql
 WITH avg_time AS 
 (SELECT  AVG(time_in_hospital) FROM patient.health)
@@ -99,6 +109,17 @@ WHERE admission_type_id = 1
 AND time_in_hospital < (SELECT * FROM avg_time);
 ```
 ![Capture](https://github.com/user-attachments/assets/8ee28a6c-313d-4f14-a7ca-66b6626ffefd)
+
+### Patient Medication Summary Report 
+
+This project generates a written summary for the top 50 patients based on the number of medications, with lab procedures as a tiebreaker. It highlights SQL's capabilities in concatenating text for creating readable and insightful reports.
+
+Key Highlights:
+
+* Combined data from the health and demographics tables using an INNER JOIN on patient_nbr.
+* Used CONCAT and CASE WHEN to format patient details into a human-readable summary.
+* Ordered results by num_medications (primary) and num_lab_procedures (tie-breaker).
+* Limited results to the top 50 patients.
 
 ```sql
 SELECT CONCAT('patient ', ph.patient_nbr , ' was ', pd.race , ' AND ', 
