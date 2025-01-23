@@ -72,6 +72,18 @@ ORDER BY avg_time DESC
 ```
 ![avg_time_procedure](https://github.com/user-attachments/assets/ef58fe15-033c-4b27-9d8a-e9fa2f32ecc9)
 
+### Combining Patient Data with UNION
+
+This project demonstrates the use of SQL's UNION to combine datasets by stacking rows from different tables. The task was to create a consolidated list of patient IDs based on specific criteria for research purposes.
+
+Key Highlights:
+
+* Used UNION to combine patient IDs of African American patients and those with "Up" for metformin.
+* Ensured the queries returned the same number of columns with matching data types for seamless stacking.
+* Delivered a clean, unified list of patient IDs efficiently.
+
+This project showcases the practical application of UNION in SQL to merge datasets for quick, actionable insights.
+
 ```sql
 SELECT patient_nbr FROM patient.demographics WHERE race = 'AfricanAmerican' 
 UNION
