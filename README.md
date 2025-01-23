@@ -16,6 +16,7 @@ Analyzed medical specialties to identify those performing the highest average nu
 * Identified specialties with an average of more than 2.5 procedures.
 * Filtered data to include specialties with over 50 patients for reliability.
 * Delivered actionable insights to help the director focus on high-procedure specialties.
+
 This project demonstrates advanced SQL techniques like DISTINCT, GROUP BY, HAVING, and aggregations for effective healthcare data analysis.
 
 ```sql
