@@ -1,4 +1,3 @@
-# HealthCare-Project
 ## Comprehensive SQL Healthcare Analytics: Insights from Patient Data
 This project focuses on leveraging SQL to analyze and derive insights from hospital patient data. It includes tasks such as identifying operational efficiencies, evaluating healthcare equity, summarizing patient details, and uncovering trends in hospital procedures. By combining advanced SQL techniques like joins, subqueries, CTEs, and data manipulation functions, this project demonstrates how SQL can transform raw data into actionable insights for better decision-making in healthcare.
 
