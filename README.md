@@ -21,8 +21,6 @@ Analyzed medical specialties to identify those performing the highest average nu
 * Filtered data to include specialties with over 50 patients for reliability.
 * Delivered actionable insights to help the director focus on high-procedure specialties.
 
-This project demonstrates advanced SQL techniques like DISTINCT, GROUP BY, HAVING, and aggregations for effective healthcare data analysis.
-
 ```sql
 SELECT DISTINCT medical_specialty, ROUND(AVG(num_procedures), 1) AS avg_procedures,
 COUNT(medical_specialty) AS count FROM patient.health 
@@ -40,8 +38,6 @@ Key Highlights:
 * Calculated the average number of lab procedures (AVG(num_lab_procedures)) grouped by race.
 * Observed no significant gaps in the number of lab tests performed across races.
   
-This project showcases advanced SQL techniques, such as joins and grouping, to answer critical healthcare questions and ensure equitable treatment across patient demographics.
-
 ```sql
 SELECT race, AVG(num_lab_procedures) AS num_avg_lab_procedures FROM patient.health AS ph
 JOIN patient.demographics AS pd on 
@@ -60,8 +56,6 @@ Key Highlights:
 * Used a CASE WHEN statement to categorize lab procedure counts into "few," "average," or "many."
 * Calculated average hospital stay duration (AVG(time_in_hospital)) for each group using GROUP BY.
 * Found a positive correlation: patients undergoing more lab procedures tend to stay longer in the hospital.
-  
-This project demonstrates how SQL's conditional logic (CASE WHEN) and aggregation functions can generate valuable insights into healthcare data.
 
 ```sql
 SELECT AVG(time_in_hospital) AS avg_time,
@@ -85,8 +79,6 @@ Key Highlights:
 * Used UNION to combine patient IDs of African American patients and those with "Up" for metformin.
 * Ensured the queries returned the same number of columns with matching data types for seamless stacking.
 * Delivered a clean, unified list of patient IDs efficiently.
-
-This project showcases the practical application of UNION in SQL to merge datasets for quick, actionable insights.
 
 ```sql
 SELECT patient_nbr FROM patient.demographics WHERE race = 'AfricanAmerican' 
