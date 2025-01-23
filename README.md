@@ -47,6 +47,18 @@ ORDER BY num_avg_lab_procedures DESC;
 ```
 ![race_avg_lab_procedures](https://github.com/user-attachments/assets/6de92ebe-f57c-427a-8150-1be606cb0f90)
 
+### Lab Procedure Frequency and Hospital Stay Correlation Analysis
+
+This project investigates the correlation between the frequency of lab procedures and the average length of hospital stay. By grouping patients into categories based on their number of lab procedures, insights were derived about how procedure frequency relates to hospital stay duration.
+
+Key Highlights:
+
+* Used a CASE WHEN statement to categorize lab procedure counts into "few," "average," or "many."
+* Calculated average hospital stay duration (AVG(time_in_hospital)) for each group using GROUP BY.
+* Found a positive correlation: patients undergoing more lab procedures tend to stay longer in the hospital.
+  
+This project demonstrates how SQL's conditional logic (CASE WHEN) and aggregation functions can generate valuable insights into healthcare data.
+
 ```sql
 SELECT AVG(time_in_hospital) AS avg_time,
 CASE 
