@@ -19,7 +19,8 @@ ORDER BY avg_procedures DESC
 ![Medical Speciality on avg procedures](https://github.com/user-attachments/assets/42a31d6f-bc23-4efc-ab22-e94972d3c5ce)
 
 ```sql
-SELECT race, AVG(num_lab_procedures) AS num_avg_lab_procedures FROM patient.health AS ph JOIN patient.demographics AS pd on 
+SELECT race, AVG(num_lab_procedures) AS num_avg_lab_procedures FROM patient.health AS ph
+JOIN patient.demographics AS pd on 
 ph.patient_nbr = pd.patient_nbr 
 GROUP BY race 
 ORDER BY num_avg_lab_procedures DESC;
